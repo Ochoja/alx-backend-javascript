@@ -1,3 +1,3 @@
-export default function getResponseFromAPI(){
-  return new Promise(() => {return true})
+export default function getResponseFromAPI() {
+  return new Promise(() => true);
 }
