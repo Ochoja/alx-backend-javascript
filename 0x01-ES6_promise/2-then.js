@@ -7,8 +7,6 @@ export default function handleResponseFromAPI(promise) {
         body: 'success',
       };
     },
-    () => {
-      return Error();
-    }
+    () => Error(),
   );
 }
