@@ -1,11 +1,5 @@
-import ClassRoom from "./0-classroom";
+import ClassRoom from './0-classroom';
 
 export default function initializeRooms() {
-  arr = [];
-
-  arr.push(ClassRoom(19));
-  arr.push(ClassRoom(20));
-  arr.push(ClassRoom(34));
-
-  return arr;
+  return [19, 20, 34].map((room) => new ClassRoom(room));
 }
