@@ -50,7 +50,7 @@ export default class HolbertonCourse {
 
   // setter methods
   set students(newStudents) {
-    if (newStudents.isArray()) {
+    if (!newStudents.isArray()) {
       throw new TypeError('Students must be an array of strings');
     } else {
       for (const element of newStudents) {
