@@ -1,7 +1,5 @@
-import setFromArray from "./6-set.js";
+import hasValuesFromArray from './7-has_array_values';
 
-const newSet = setFromArray([12, 32, 15, 78, 98, 15]);
-
-for (let i of newSet) {
-  console.log(i)
-}
+console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [1]));
+console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [10]));
+console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [1, 10]));
