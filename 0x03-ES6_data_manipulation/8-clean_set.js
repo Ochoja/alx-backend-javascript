@@ -1,21 +1,21 @@
 export default function cleanSet(newSet, startString) {
-  let newString = '';
-  const newArray = [];
+  const newString = [];
   const len = startString.length;
+
+  if (
+    typeof newSet !== 'object' ||
+    typeof startString != 'string' ||
+    startString.length === 0
+  ) {
+    return '';
+  }
 
   newSet.forEach((word) => {
     // check if word starts with startString
-    if (word.startsWith(startString) && startString != '') {
-      newArray.push(word.slice(len));
-      //   newString = newString.concat(word.slice(len), '-');
+    if (word && word.startsWith(startString)) {
+      newString.push(word.slice(len));
     }
   });
 
-  for (let i = 0; i < newArray.length; i++) {
-    if (newArray[i] != '') {
-      newString = newString.concat(newArray[i], '-');
-    }
-  }
-
-  return newString.slice(0, newString.length - 1);
+  return newString.join('-');
 }
