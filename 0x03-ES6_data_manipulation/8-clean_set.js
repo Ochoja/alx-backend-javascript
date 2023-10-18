@@ -12,7 +12,11 @@ export default function cleanSet(newSet, startString) {
 
   newSet.forEach((word) => {
     // check if word starts with startString
-    if (word && word.startsWith(startString)) {
+    if (
+      word
+      && word.startsWith(startString)
+      && word.length > startString.length
+    ) {
       newString.push(word.slice(len));
     }
   });
