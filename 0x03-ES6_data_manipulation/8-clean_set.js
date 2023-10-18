@@ -3,23 +3,23 @@ export default function cleanSet(newSet, startString) {
   const len = startString.length;
 
   if (
-    typeof newSet !== 'object'
-    || typeof startString !== 'string'
-    || startString.length === 0
+    typeof newSet !== 'object' ||
+    typeof startString !== 'string' ||
+    startString.length === 0
   ) {
     return '';
   }
 
-  newSet.forEach((word) => {
+  for (const word of newSet) {
     // check if word starts with startString
     if (
-      word
-      && word.startsWith(startString)
-      && word.length > startString.length
+      word &&
+      word.startsWith(startString) &&
+      word.length > startString.length
     ) {
       newString.push(word.slice(len));
     }
-  });
+  }
 
   return newString.join('-');
 }
