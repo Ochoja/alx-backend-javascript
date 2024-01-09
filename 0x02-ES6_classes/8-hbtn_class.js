@@ -6,9 +6,9 @@ export default class HolbertonClass {
 
   // Modify the print value when object is invoked
   // with Number and String eg Number(instance)
-  [Symbol.toPrimitive](val) {
-    if (val === 'number') return this._size;
-    if (val === 'string') return this._location;
+  [Symbol.toPrimitive](dataType) {
+    if (dataType === 'number') return this._size;
+    if (dataType === 'string') return this._location;
     return undefined;
   }
 }
