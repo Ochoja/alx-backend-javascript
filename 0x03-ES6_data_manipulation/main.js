@@ -1,11 +1,9 @@
-import cleanSet from './8-clean_set.js';
+import listOfStudents from './9-hoisting.js';
 
-console.log(
-  cleanSet(
-    new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana', 'bon']),
-    'bon'
-  )
+console.log(listOfStudents);
+
+const listPrinted = listOfStudents.map(
+  (student) => student.fullStudentDescription
 );
-console.log(
-  cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'bananabon']), '')
-);
+
+console.log(listPrinted);
