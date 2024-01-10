@@ -1,9 +1,8 @@
-import listOfStudents from './9-hoisting.js';
+import updateUniqueItems from './10-update_uniq_items.js';
+import groceriesList from './9-groceries_list.js';
 
-console.log(listOfStudents);
+const map = groceriesList();
+console.log(map);
 
-const listPrinted = listOfStudents.map(
-  (student) => student.fullStudentDescription
-);
-
-console.log(listPrinted);
+updateUniqueItems(map);
+console.log(map);
