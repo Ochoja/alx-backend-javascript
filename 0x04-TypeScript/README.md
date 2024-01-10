@@ -1,6 +1,8 @@
-# TypeScript
+# 0x04. Typescript
+
 ## Areas Covered
-<li>Basic Types in Typescript</li>
+
+<li>Basic types in Typescript</li>
 <li>Interfaces, Classes, and functions</li>
 <li>How to work with the DOM and Typescript</li>
 <li>Generic types</li>
