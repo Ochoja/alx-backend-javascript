@@ -48,6 +48,21 @@ function createEmployee(
   return new Director();
 }
 
-console.log(createEmployee(200));
-console.log(createEmployee(1000));
-console.log(createEmployee('$500'));
+console.log(createEmployee(200)); // Teacher
+console.log(createEmployee(1000)); // Director
+console.log(createEmployee('$500')); // Director
+
+// Type Predicate
+function isDirector(
+  employee: TeacherInterface | DirectorInterface
+): employee is DirectorInterface {
+  return employee instanceof Director;
+}
+
+function executeWork(employee: TeacherInterface | DirectorInterface): void {
+  if (employee instanceof Director) {
+    employee.workDirectorTasks();
+  } else if (employee instanceof Teacher) {
+    employee.workTeacherTasks();
+  }
+}

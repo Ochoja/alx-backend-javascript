@@ -41,8 +41,9 @@ table.appendChild(table_head);
 /* End table head definition*/
 
 /* Table body definition */
+// Add rows to the tbody
 for (let student of studentsList) {
-  let tr = document.createElement('tr'); // create row for each student
+  let tr = document.createElement('tr');
 
   // loop through student data and add to row
   for (const value of Object.values(student)) {
@@ -52,12 +53,11 @@ for (let student of studentsList) {
     tr.appendChild(td);
   }
 
-  // add row to table
-  table_body.appendChild(tr);
+  table_body.appendChild(tr); // add row to table
 }
 /* End table body definition */
 
-// Add table to document
+/* Add table to document */
 table.setAttribute('border', '2'); // set value of table border to 2
 table.appendChild(table_body);
 body.appendChild(table);
