@@ -45,7 +45,7 @@ for (let student of studentsList) {
   let tr = document.createElement('tr'); // create row for each student
 
   // loop through student data and add to row
-  for (const [key, value] of Object.entries(student)) {
+  for (const value of Object.values(student)) {
     const text = document.createTextNode(value);
     let td = document.createElement('td');
     td.appendChild(text);
